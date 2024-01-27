@@ -26,11 +26,11 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
         _conn = new SQLiteAsyncConnection(_dbPath);
 
 #if DEBUG
-        DebugData.PopulateTables(this);
+        await ResetTableAsync<Models.Dlc>();
+        await DebugData.PopulateTables(this);
 #endif
 
         await CreateTables();
-        await InsertAsync(new Models.DlcContent() { Name = "California"});
     }
 
     private async Task CreateTables()

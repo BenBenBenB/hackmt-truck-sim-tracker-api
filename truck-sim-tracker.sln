@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "truck-sim-tracker.client", "truck-sim-tracker.client\truck-sim-tracker.client.esproj", "{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruckSimTracker.Data", "TruckSimTracker.Data\TruckSimTracker.Data.csproj", "{C66DBC54-663B-4C16-8A74-588849D197B4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruckSimTracker.Services", "TruckSimTracker.Services\TruckSimTracker.Services.csproj", "{FFA1B950-0D9F-4A78-B26D-4A4DBA1C20F6}"
@@ -17,12 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{C66DBC54-663B-4C16-8A74-588849D197B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C66DBC54-663B-4C16-8A74-588849D197B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C66DBC54-663B-4C16-8A74-588849D197B4}.Release|Any CPU.ActiveCfg = Release|Any CPU

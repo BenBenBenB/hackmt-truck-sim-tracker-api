@@ -11,7 +11,7 @@ namespace TruckSimTracker.Data
 {
     public static class DebugData
     {
-        public static async void PopulateTables(TruckSimTrackerRepository repo)
+        public static async Task PopulateTables(TruckSimTrackerRepository repo)
         {
             await PopulateTable(repo, DlcContentData);
         }

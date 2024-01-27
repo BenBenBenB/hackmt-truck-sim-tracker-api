@@ -7,8 +7,8 @@ public interface ITruckSimTrackerRepository
 {
     public Task<List<T>> GetAsync<T>() where T : ITruckSimTrackerDataModel, new();
     public Task<T> GetAsync<T>(int id) where T : ITruckSimTrackerDataModel, new();
-    public Task InsertAsync<T>(T newItem) where T : ITruckSimTrackerDataModel, new();
-    public Task UpdateAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new();
+    public Task<T> InsertAsync<T>(T newItem) where T : ITruckSimTrackerDataModel, new();
+    public Task<T> UpdateAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new();
     public Task ResetTableAsync<T>() where T : ITruckSimTrackerDataModel, new();
 }
 
@@ -76,27 +76,31 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
         return result ?? new();
     }
 
-    public async Task InsertAsync<T>(T newItem) where T : ITruckSimTrackerDataModel, new()
+    public async Task<T> InsertAsync<T>(T newItem) where T : ITruckSimTrackerDataModel, new()
     {
         try
         {
             await InitAsync();
             await _conn.InsertAsync(newItem);
+            return newItem;
         }
         catch (Exception ex)
         {
+            return new();
         }
     }
 
-    public async Task UpdateAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new()
+    public async Task<T> UpdateAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new()
     {
         try
         {
             await InitAsync();
             await _conn.UpdateAsync(dataItem);
+            return dataItem;
         }
         catch (Exception ex)
         {
+            return new();
         }
     }
 }

@@ -19,7 +19,7 @@ public class job : ITruckSimTrackerDataModel
     public int endcityId { get; set; }
     public int pay { get; set; }
 
-    public bool nodamage_on_job { get; set; }
+    public bool nodamage_on_job { get; set; } = false; 
 
 
 }

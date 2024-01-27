@@ -12,6 +12,6 @@ namespace TruckSimTracker.Data.Models;
         [ForeignKey(typeof(stte))]
         public int stteId { get; set; }
         public string Name { get; set; } = string.Empty;
-        public bool visited { get; set; }
+        public bool visited { get; set; } = false; 
 
     }

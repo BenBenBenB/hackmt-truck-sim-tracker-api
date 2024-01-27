@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
-    <RootNamespace>truck_sim_tracker.Server</RootNamespace>
+    <RootNamespace>TruckSimTracker.Server</RootNamespace>
     <SpaRoot>..\truck-sim-tracker.client</SpaRoot>
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:5173</SpaProxyServerUrl>
@@ -19,9 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\truck-sim-tracker.client\truck-sim-tracker.client.esproj">
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
+    <ProjectReference Include="..\TruckSimTracker.Services\TruckSimTracker.Services.csproj" />
   </ItemGroup>
 
 </Project>

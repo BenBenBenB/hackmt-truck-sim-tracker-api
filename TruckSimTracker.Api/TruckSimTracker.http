@@ -1,0 +1,6 @@
+@TruckSimTracker.Server_HostAddress = https://localhost:5173
+
+GET {{TruckSimTracker.Server_HostAddress}}/downloadablecontent/
+Accept: application/json
+
+###

@@ -12,7 +12,7 @@ function App() {
     const [forecasts, setForecasts] = useState<Forecast[]>();
 
     useEffect(() => {
-        populateWeatherData();
+        populateDlcData();
     }, []);
 
     const contents = forecasts === undefined
@@ -46,7 +46,7 @@ function App() {
         </div>
     );
 
-    async function populateWeatherData() {
+    async function populateDlcData() {
         const response = await fetch('weatherforecast');
         const data = await response.json();
         setForecasts(data);

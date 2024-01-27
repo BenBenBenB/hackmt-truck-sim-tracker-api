@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruckSimTracker.Api", "truck-sim-tracker.Server\TruckSimTracker.Api.csproj", "{4C3F6133-7704-42D4-8624-4D3B151BCB16}"
-EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "truck-sim-tracker.client", "truck-sim-tracker.client\truck-sim-tracker.client.esproj", "{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruckSimTracker.Data", "TruckSimTracker.Data\TruckSimTracker.Data.csproj", "{C66DBC54-663B-4C16-8A74-588849D197B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruckSimTracker.Data", "TruckSimTracker.Data\TruckSimTracker.Data.csproj", "{C66DBC54-663B-4C16-8A74-588849D197B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruckSimTracker.Services", "TruckSimTracker.Services\TruckSimTracker.Services.csproj", "{FFA1B950-0D9F-4A78-B26D-4A4DBA1C20F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruckSimTracker.Services", "TruckSimTracker.Services\TruckSimTracker.Services.csproj", "{FFA1B950-0D9F-4A78-B26D-4A4DBA1C20F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruckSimTracker.Api", "TruckSimTracker.Api\TruckSimTracker.Api.csproj", "{94F48BEE-3FF5-491B-B7BA-F18517F6D4C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C3F6133-7704-42D4-8624-4D3B151BCB16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C3F6133-7704-42D4-8624-4D3B151BCB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C3F6133-7704-42D4-8624-4D3B151BCB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C3F6133-7704-42D4-8624-4D3B151BCB16}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20AB6B0F-4D10-4268-8186-CA1AEA1CF497}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -35,6 +31,10 @@ Global
 		{FFA1B950-0D9F-4A78-B26D-4A4DBA1C20F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFA1B950-0D9F-4A78-B26D-4A4DBA1C20F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFA1B950-0D9F-4A78-B26D-4A4DBA1C20F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F48BEE-3FF5-491B-B7BA-F18517F6D4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F48BEE-3FF5-491B-B7BA-F18517F6D4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F48BEE-3FF5-491B-B7BA-F18517F6D4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F48BEE-3FF5-491B-B7BA-F18517F6D4C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

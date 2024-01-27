@@ -2,7 +2,7 @@
 
 namespace TruckSimTracker.Data.Models
 {
-    public class Cargo : ITruckSimTrackerDataModel
+    public class DlcContent : ITruckSimTrackerDataModel
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

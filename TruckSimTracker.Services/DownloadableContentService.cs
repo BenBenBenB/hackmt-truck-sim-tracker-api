@@ -6,7 +6,8 @@ namespace TruckSimTracker.Services
     public interface IDownloadableContentService
     {
         Task<List<DlcContent>> GetAsync();
-        Task<DlcContent> GetAsync( int id);
+        Task<DlcContent> GetAsync(int id);
+        Task<DlcContent> InsertAsync(DlcContent newItem);
     }
     public class DownloadableContentService : IDownloadableContentService
     {
@@ -24,6 +25,11 @@ namespace TruckSimTracker.Services
         public async Task<DlcContent> GetAsync(int id)
         {
             return await Repo.GetAsync<DlcContent>(id);
+        }
+
+        public async Task<DlcContent> InsertAsync(DlcContent newItem)
+        {
+            return await Repo.InsertAsync(newItem);
         }
     }
 }

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using TruckSimTracker.Data.Repositories;
+using TruckSimTracker.Api;
+using TruckSimTracker.Data.Models;
 using TruckSimTracker.Services;
 
 namespace TruckSimTracker.Server.Controllers
@@ -17,7 +18,7 @@ namespace TruckSimTracker.Server.Controllers
             _dlcService = dlcService;
         }
 
-        [HttpGet(Name = "Get")]
+        [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
             var data = await _dlcService.GetAsync();
@@ -26,6 +27,13 @@ namespace TruckSimTracker.Server.Controllers
                 Id = x.Id,
                 Name = x.Name,
             });
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostAsync(DlcContent newItem)
+        {
+            var result = await _dlcService.InsertAsync(newItem);
             return Ok(result);
         }
     }

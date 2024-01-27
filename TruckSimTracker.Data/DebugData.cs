@@ -61,13 +61,22 @@ namespace TruckSimTracker.Data
             new stte() {Id = 13,Name = "Texas ",DlcId = 12,abrev = "TX" },
             new stte() {Id = 14,Name = "Utah",DlcId = 8,abrev = "UT" },
                         
-        };              
-        static List<city> cityData = new() { 
+        };
+        static List<city> cityCaliforniaData = new() {
+            new city() {Id = 1,stteId = 3, Name = "Backersfield" },
+            new city() {Id = 1,stteId = 3, Name = "Barstow" },
+            new city() {Id = 1,stteId = 3, Name = "Carlsbad" },
+            new city() {Id = 1,stteId = 3, Name = "El Centro" },
+            new city() {Id = 1,stteId = 3, Name = "Eureka" },
+            new city() {Id = 1,stteId = 3, Name = "Fresno" },
+            new city() {Id = 1,stteId = 3, Name = "Hilt" },
+            new city() {Id = 1,stteId = 3, Name = "Huron" },
+            new city() {Id = 1,stteId = 3, Name = "Los Angeles" },
+            new city() {Id = 1,stteId = 3, Name = "Oakland" },
+            new city() {Id = 1,stteId = 3, Name = "Oxnard" },
+            new city() {Id = 1,stteId = 3, Name = "Redd" },
 
-            
-        
-        
-        
+
         };
     }
 }

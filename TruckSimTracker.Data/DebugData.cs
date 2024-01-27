@@ -62,7 +62,22 @@ namespace TruckSimTracker.Data
             new State() {Id = 14,Name = "Utah",DlcContentId = 8,Abbreviation = "UT" },
                         
         };
-        static List<city> cityCaliforniaData = new() {
+        static List<city> cityNevadaaData = new() 
+        {
+            new city() {Id = 1,StateId = 11, Name = "CArson City" },
+            new city() {Id = 2,StateId = 11, Name = "Elko" },
+            new city() {Id = 3,StateId = 11, Name = "ELy" },
+            new city() {Id = 4,StateId = 11, Name = "Jackpot" },
+            new city() {Id = 5,StateId = 11, Name = "Las Vegas" },
+            new city() {Id = 6,StateId = 11, Name = "Pioche" },
+            new city() {Id = 7,StateId = 11, Name = "Primm" },
+            new city() {Id = 8,StateId = 11, Name = "Reno" },
+            new city() {Id = 9,StateId = 11, Name = "Tonopah" },
+            new city() {Id = 10,StateId = 11, Name = "WInnemuca " },
+
+        };
+        static List<city> cityCaliforniaData = new()
+        {
             new city() {Id = 1,StateId = 3, Name = "Backersfield" },
             new city() {Id = 2,StateId = 3, Name = "Barstow" },
             new city() {Id = 3,StateId = 3, Name = "Carlsbad" },
@@ -73,7 +88,7 @@ namespace TruckSimTracker.Data
             new city() {Id = 8,StateId = 3, Name = "Huron" },
             new city() {Id = 9,StateId = 3, Name = "Los Angeles" },
             new city() {Id = 10,StateId = 3, Name = "Oakland" },
-            new city() {Id = 11,StateId = 3, Name = "Oxnard" },  
+            new city() {Id = 11,StateId = 3, Name = "Oxnard" },
             new city() {Id = 12,StateId = 3, Name = "Redding" },
             new city() {Id = 13,StateId = 3, Name = "Sacramento" },
             new city() {Id = 14,StateId = 3, Name = "San Deigo" },
@@ -83,8 +98,6 @@ namespace TruckSimTracker.Data
             new city() {Id = 18,StateId = 3, Name = "Stockton" },
             new city() {Id = 19,StateId = 3, Name = "Truckee" },
             new city() {Id = 20,StateId = 3, Name = "Ukiah" },
-
-
         };
     }
 }

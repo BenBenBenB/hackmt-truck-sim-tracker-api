@@ -86,5 +86,11 @@ namespace TruckSimTracker.Data
             new City() {Id = 19, StateId = 3, Name = "Truckee" },
             new City() {Id = 20, StateId = 3, Name = "Ukiah" },
         };
+
+        static List<Achivement> AchivementsData = new()
+        {
+            new Achivement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo"},
+            new Achivement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station"},
+        };
     }
 }

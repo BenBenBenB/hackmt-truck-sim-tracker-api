@@ -26,7 +26,7 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
         _conn = new SQLiteAsyncConnection(_dbPath);
 
 #if DEBUG
-        await ResetTableAsync<Models.Dlc>();
+        await ResetAllTablesAsync();
         await DebugData.PopulateTables(this);
 #endif
 
@@ -44,6 +44,21 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
     }
 
     // for debug, probably
+    public async Task ResetAllTablesAsync()
+    {
+        Task.WaitAll(
+            _conn.DropTableAsync<Models.Achivement>(),
+            _conn.DropTableAsync<Models.Cargo>(),
+            _conn.DropTableAsync<Models.CargoType>(),
+            _conn.DropTableAsync<Models.City>(),
+            _conn.DropTableAsync<Models.DlcContent>(),
+            _conn.DropTableAsync<Models.Job>(),
+            _conn.DropTableAsync<Models.State>()
+
+        );
+        await CreateTables();
+    }
+
     public async Task ResetTableAsync<T>() where T : ITruckSimTrackerDataModel, new()
     {
         await InitAsync();

@@ -65,6 +65,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TruckSimTracker.Api\TruckSimTracker.Api.csproj" />
       <ProjectReference Include="..\TruckSimTracker.Data\TruckSimTracker.Data.csproj" />
     </ItemGroup>
 

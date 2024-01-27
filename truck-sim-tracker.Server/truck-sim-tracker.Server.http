@@ -1,0 +1,6 @@
+@truck_sim_tracker.Server_HostAddress = http://localhost:5281
+
+GET {{truck_sim_tracker.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

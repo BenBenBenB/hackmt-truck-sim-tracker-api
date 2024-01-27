@@ -44,22 +44,22 @@ namespace TruckSimTracker.Data
             new DlcContent() { Id = 16,Name = "Arkansas" },
             new DlcContent() { Id = 17,Name = "Missouri" },
         };                     
-        static List<stte> stteData = new()
+        static List<State> StateData = new()
         {
-            new stte() {Id = 1,Name = "Arizona",DlcId = 1,abrev = "AZ" },
-            new stte() {Id = 2,Name = "Arkansas",DlcId = 16,abrev = "AR" },
-            new stte() {Id = 3,Name = "California",DlcId = 0,abrev = "CA" },
-            new stte() {Id = 4,Name = "Colorado",DlcId = 10 , abrev = "CO"},
-            new stte() {Id = 5,Name = "Idaho",DlcId = 9,abrev = "ID" },
-            new stte() {Id = 6,Name = "Kansas",DlcId = 14, abrev = "KS"},
-            new stte() {Id = 7,Name = "Missouri",DlcId = 17, abrev = "MO"},
-            new stte() {Id = 8,Name = "Montana",DlcId = 11,abrev = "MT"},
-            new stte() {Id = 9,Name = "Nebraska",DlcId = 15,abrev = "NE" },
-            new stte() {Id = 10,Name = "New Mexico",DlcId = 3,abrev = "NM" },
-            new stte() {Id = 11,Name = "Nevada ",DlcId = 0,abrev = "NV"},
-            new stte() {Id = 12,Name = "Oregon",DlcId = 4,abrev = "OR" },
-            new stte() {Id = 13,Name = "Texas ",DlcId = 12,abrev = "TX" },
-            new stte() {Id = 14,Name = "Utah",DlcId = 8,abrev = "UT" },
+            new State() {Id = 1,Name = "Arizona",DlcContentId = 1,Abbreviation = "AZ" },
+            new State() {Id = 2,Name = "Arkansas",DlcContentId = 16,Abbreviation = "AR" },
+            new State() {Id = 3,Name = "California",DlcContentId = 0,Abbreviation = "CA" },
+            new State() {Id = 4,Name = "Colorado",DlcContentId = 10 , Abbreviation = "CO"},
+            new State() {Id = 5,Name = "Idaho",DlcContentId = 9,Abbreviation = "ID" },
+            new State() {Id = 6,Name = "Kansas",DlcContentId = 14, Abbreviation = "KS"},
+            new State() {Id = 7,Name = "Missouri",DlcContentId = 17, Abbreviation = "MO"},
+            new State() {Id = 8,Name = "Montana",DlcContentId = 11,Abbreviation = "MT"},
+            new State() {Id = 9,Name = "Nebraska",DlcContentId = 15,Abbreviation = "NE" },
+            new State() {Id = 10,Name = "New Mexico",DlcContentId = 3,Abbreviation = "NM" },
+            new State() {Id = 11,Name = "Nevada ",DlcContentId = 0,Abbreviation = "NV"},
+            new State() {Id = 12,Name = "Oregon",DlcContentId = 4,Abbreviation = "OR" },
+            new State() {Id = 13,Name = "Texas ",DlcContentId = 12,Abbreviation = "TX" },
+            new State() {Id = 14,Name = "Utah",DlcContentId = 8,Abbreviation = "UT" },
                         
         };
         static List<city> cityCaliforniaData = new() {

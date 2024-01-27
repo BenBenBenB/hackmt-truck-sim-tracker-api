@@ -3,19 +3,18 @@ using SQLiteNetExtensions.Attributes;
 
 namespace TruckSimTracker.Data.Models;
 
-    public class stte : ITruckSimTrackerDataModel
-    {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-        public DateTime Updated { get; set; } = DateTime.UtcNow;
-        [ForeignKey(typeof(Dlc))]
-        public int DlcId { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string abrev { get; set; } = string.Empty;
-        [OneToMany(CascadeOperations = CascadeOperation.None)]
-        public List<city> Cities { get; set; } = default!;
-        public bool basegame { get; set; } 
+public class State : ITruckSimTrackerDataModel
+{
+    [PrimaryKey, AutoIncrement]
+    public int Id { get; set; }
+    public DateTime Updated { get; set; } = DateTime.UtcNow;
+    [ForeignKey(typeof(DlcContent))]
+    public int DlcContentId { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string Abbreviation { get; set; } = string.Empty;
 
+    [OneToMany(CascadeOperations = CascadeOperation.CascadeRead)]
+    public List<city> Cities { get; set; } = default!;
 }
 
 

@@ -9,9 +9,9 @@ namespace TruckSimTracker.Data.Models;
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public DateTime Updated { get; set; } = DateTime.UtcNow;
-        [ForeignKey(typeof(stte))]
-        public int stteId { get; set; }
+        [ForeignKey(typeof(State))]
+        public int StateId { get; set; }
         public string Name { get; set; } = string.Empty;
-        public bool visited { get; set; } = false; 
+        public bool Visited { get; set; } = false; 
 
     }

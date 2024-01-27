@@ -2,7 +2,7 @@
 using SQLiteNetExtensions.Attributes;
 
 namespace TruckSimTracker.Data.Models;
-public class job : ITruckSimTrackerDataModel
+public class Job : ITruckSimTrackerDataModel
 {
     [PrimaryKey, AutoIncrement]
     public int Id { get; set; }
@@ -10,16 +10,14 @@ public class job : ITruckSimTrackerDataModel
     public string Company { get; set; } = string.Empty;
 
     [ForeignKey(typeof(Cargo))]
-    public int cargoid { get; set; }
-    public int value { get; set; }
+    public int CargoId { get; set; }
+    public int Value { get; set; }
+    public int Pay { get; set; }
 
     [ForeignKey(typeof(city))]
-    public int stratcityId { get; set; }
+    public int StartCityId { get; set; }
     [ForeignKey(typeof(city))]
-    public int endcityId { get; set; }
-    public int pay { get; set; }
+    public int EndCityId { get; set; }
 
-    public bool nodamage_on_job { get; set; } = false; 
-
-
+    public bool Perfect { get; set; } = false; 
 }

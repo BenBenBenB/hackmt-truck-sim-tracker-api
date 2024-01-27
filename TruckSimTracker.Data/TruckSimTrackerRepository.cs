@@ -30,7 +30,6 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
 #endif
 
         await CreateTables();
-        await InsertAsync(new Models.DlcContent() { Name = "California"});
     }
 
     private async Task CreateTables()

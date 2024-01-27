@@ -9,4 +9,4 @@ namespace TruckSimTracker.Data.Models
         public DateTime Updated { get; set; } = DateTime.UtcNow;
         public string Name { get; set; } = string.Empty;
     }
-    
+}

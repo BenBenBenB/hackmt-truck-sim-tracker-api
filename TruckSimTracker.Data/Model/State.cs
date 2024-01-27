@@ -14,7 +14,7 @@ public class State : ITruckSimTrackerDataModel
     public string Abbreviation { get; set; } = string.Empty;
 
     [OneToMany(CascadeOperations = CascadeOperation.CascadeRead)]
-    public List<city> Cities { get; set; } = default!;
+    public List<City> Cities { get; set; } = default!;
 }
 
 

@@ -2,7 +2,7 @@
 using SQLiteNetExtensions.Attributes;
 
 namespace TruckSimTracker.Data.Models;
-public class cargotype : ITruckSimTrackerDataModel
+public class CargoType : ITruckSimTrackerDataModel
 {
     [PrimaryKey, AutoIncrement]
     public int Id { get; set; }

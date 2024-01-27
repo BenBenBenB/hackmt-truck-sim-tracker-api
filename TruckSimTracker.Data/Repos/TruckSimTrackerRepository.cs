@@ -7,7 +7,7 @@ namespace TruckSimTracker.Data.Repositories;
 
 public interface ITruckSimTrackerRepository
 {
-    public Task<List<T>> GetAsync<T>(bool includeDeleted = false, bool withChildren = false) where T : ITruckSimTrackerDataModel, new();
+    public Task<List<T>> GetAsync<T>(bool withChildren = false) where T : ITruckSimTrackerDataModel, new();
     public Task<T> GetAsync<T>(int id, bool withChildren = false) where T : ITruckSimTrackerDataModel, new();
     public Task InsertAsync<T>(T newItem) where T : ITruckSimTrackerDataModel, new();
     public Task UpdateAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new();
@@ -48,7 +48,7 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
         await _conn.CreateTableAsync<T>();
     }
 
-    public async Task<List<T>> GetAsync<T>(bool includeDeleted = false, bool withChildren = false) where T : ITruckSimTrackerDataModel, new()
+    public async Task<List<T>> GetAsync<T>(bool withChildren = false) where T : ITruckSimTrackerDataModel, new()
     {
         List<T> result = [];
         try
@@ -58,14 +58,11 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
             {
                 var data = await _conn.GetAllWithChildrenAsync<T>();
                 result = data
-                    .Where(d => includeDeleted || !d.Deleted)
                     .ToList();
-
             }
             else
             {
                 result = await _conn.Table<T>()
-                    .Where(d => includeDeleted || !d.Deleted)
                     .ToListAsync();
             }
         }

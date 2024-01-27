@@ -10,6 +10,5 @@ namespace TruckSimTracker.Data.Models
     {
         public int Id { get; set; }
         public DateTime Updated { get; set; }
-        public bool Deleted { get; set; }
     }
 }

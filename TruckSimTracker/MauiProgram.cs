@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using TruckSimTracker.Data.Repositories;
 
 namespace TruckSimTracker
 {
@@ -16,8 +17,12 @@ namespace TruckSimTracker
 
             builder.Services.AddMauiBlazorWebView();
 
+            string dbPath = FileAccessHelper.GetLocalFilePath("truck-sim-tracker.db3");
+            builder.Services.AddSingleton<ITruckSimTrackerRepository>(s => ActivatorUtilities.CreateInstance<TruckSimTrackerRepository>(s, dbPath));
+
+
 #if DEBUG
-    		builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
 

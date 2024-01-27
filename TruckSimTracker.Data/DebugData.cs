@@ -74,7 +74,15 @@ namespace TruckSimTracker.Data
             new city() {Id = 1,stteId = 3, Name = "Los Angeles" },
             new city() {Id = 1,stteId = 3, Name = "Oakland" },
             new city() {Id = 1,stteId = 3, Name = "Oxnard" },
-            new city() {Id = 1,stteId = 3, Name = "Redd" },
+            new city() {Id = 1,stteId = 3, Name = "Redding" },
+            new city() {Id = 1,stteId = 3, Name = "Sacramento" },
+            new city() {Id = 1,stteId = 3, Name = "San Deigo" },
+            new city() {Id = 1,stteId = 3, Name = "San Fransisco" },
+            new city() {Id = 1,stteId = 3, Name = "Santa Cruz" },
+            new city() {Id = 1,stteId = 3, Name = "Santa Maria" },
+            new city() {Id = 1,stteId = 3, Name = "Stockton" },
+            new city() {Id = 1,stteId = 3, Name = "Truckee" },
+            new city() {Id = 1,stteId = 3, Name = "Ukiah" },
 
 
         };

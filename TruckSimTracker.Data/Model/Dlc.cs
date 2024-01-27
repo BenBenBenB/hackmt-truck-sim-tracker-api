@@ -3,13 +3,15 @@ using SQLiteNetExtensions.Attributes;
 
 namespace TruckSimTracker.Data.Models;
 
-    public class Cargo : ITruckSimTrackerDataModel
+
+    public class Dlc : ITruckSimTrackerDataModel
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public DateTime Updated { get; set; } = DateTime.UtcNow;
         public string Name { get; set; } = string.Empty;
-
-        [ForeignKey(typeof(cargotype))]
-        public int cargotypeId { get; set; }
-    }
+        public bool owned { get; set; }
+        [OneToMany(CascadeOperations = CascadeOperation.None)]
+        public List<stte> States { get; set; } = default!;
+  
+}

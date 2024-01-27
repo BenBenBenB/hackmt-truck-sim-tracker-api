@@ -4,7 +4,7 @@ using SQLiteNetExtensions.Attributes;
 namespace TruckSimTracker.Data.Models;
 
 
-    public class city : ITruckSimTrackerDataModel
+    public class City : ITruckSimTrackerDataModel
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

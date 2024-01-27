@@ -11,6 +11,6 @@ namespace TruckSimTracker.Data.Models;
         [Unique]
         public string Name { get; set; } = string.Empty;
 
-        [ForeignKey(typeof(cargotype))]
+        [ForeignKey(typeof(CargoType))]
         public int cargotypeId { get; set; }
     }

@@ -106,26 +106,25 @@ namespace TruckSimTracker.Data
         };
 
         static List<Achievement> AchievementsData = new()
-        {
-            new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/9/9f/ATS_Achievement_money_100k.png/revision/latest?cb=20160218092526"},
-            new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/d/dc/ATS_Achievement_use_gas_stat.png/revision/latest?cb=20160218092125"},
-            new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/8/82/ATS_Achievement_use_weigh_stat.png/revision/latest?cb=20160218092228"},
-            new Achievement() {Id = 4, StateId = 3, Name = "California Dreamin'", Description = "Discover Every City in California", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/5/5c/ATS_Achievement_ca_visit_cities.png/revision/latest?cb=20160218093236"},
-            new Achievement() {Id = 5, StateId = 3, CityId = 15, Name = "Sea Dog", Description = "Deliver Cargo to a Port in Oakland and a Port in San Francisco", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/8/88/ATS_Achievement_ca_sea_ports.png/revision/latest?cb=20160218093121"},
-            new Achievement() {Id = 6, StateId = 3, Name = "Cheers!", Description = "Discover Three Vineyards in California", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/5/5e/ATS_Achievement_ca_country.png/revision/latest?cb=20160218093758"},
-            new Achievement() {Id = 7, Name = "Warming Up", Description = "Drive 10,000 Miles During Deliveries", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/5/5c/ATS_Achievement_drive_10k.png/revision/latest?cb=20160218092631"},
-            new Achievement() {Id = 8, Name = "Rig Master", Description = "Own Your Own Truck", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/8/8f/ATS_Achievement_buy_truck.png/revision/latest?cb=20160218092322"},
-            new Achievement() {Id = 9, Name = "Company Collector", Description = "Preform Deliveries for at Least Fifteen Different Companies", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/b/b2/ATS_Achievement_jobs15comp.png/revision/latest?cb=20160218093655" },
-            new Achievement() {Id = 10, Name = "High Five", Description = "Complete a Perfect Delivery (no damage, no fines, in-time) For a Job That is at Least 600 Miles", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/f/f9/ATS_Achievement_perf_job.png/revision/latest?cb=20160218092834"},
-            new Achievement() {Id = 11, Name = "Final Makeover", Description = "Fully Upgrade one of your Garages", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/6/63/ATS_Achievement_maxed_garage.png/revision/latest?cb=20160218093017"}, 
-            new Achievement() {Id = 12, Name = "Not a Problem", Description = "Successfully Park a Trailer at a Delivery Point", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/c/c5/ATS_Achievement_no_autopark.png/revision/latest?cb=20160218093723"},
-            new Achievement() {Id = 13, Name = "Like a Boss", Description = "Successfully Park a Trailer at a Hard Delivery Point", ImageUrl= "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/d/d1/ATS_Achievement_harddifficlt.png/revision/latest?cb=20160218092439"},
-            new Achievement() {Id = 14, Name = "I Think I Like It", Description = "Finish 50 Deliveries", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/b/b4/ATS_Achievement_finish50jobs.png/revision/latest?cb=20160218093330"},
-            new Achievement() {Id = 15, Name = "Pimp MY Truck", Description = "Buy and Apply a Custom Paint Job", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/c/cb/ATS_Achievement_custompj.png/revision/latest?cb=20160218092727"},
-            new Achievement() {Id = 16, StateId = 11, Name = "Silver State", Description = "Discover Every City in Nevada", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/3/31/ATS_Achievement_nv_visit_cities.png/revision/latest?cb=20160315184434"},
-            new Achievement() {Id = 17, StateId = 11, Name = "Gold Fever", Description = "Deliver Cargo to Both Quarries in Nevada",ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/8/8a/ATS_Achievement_nv_quarries.png/revision/latest?cb=20160315184258"},
-            new Achievement() {Id = 18, Name = "Parking Challenge", Description = "Complete Twenty Deliveries Choosing the Trailer Delivery Option Which Requires Reversing", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/2/2a/Parking_Challenge_achievement.jpg/revision/latest?cb=20221003163748"}
-        
+        {            
+            new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = "../images/achievements/Cha-Ching.webp"},
+            new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = "../images/achievements/GasGuzzler.webp"},
+            new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = "../images/achievements/Bmi.webp"},
+            new Achievement() {Id = 4, StateId = 3, Name = "California Dreamin'", Description = "Discover Every City in California", ImageUrl = "../images/achievements/california.webp"},
+            new Achievement() {Id = 5, StateId = 3, CityId = 15, Name = "Sea Dog", Description = "Deliver Cargo to a Port in Oakland and a Port in San Francisco", ImageUrl = "../images/achievements/SeaDog.webp"},
+            new Achievement() {Id = 6, StateId = 3, Name = "Cheers!", Description = "Discover Three Vineyards in California", ImageUrl = "../images/achievements/Cheers.webp"},
+            new Achievement() {Id = 7, Name = "Warming Up", Description = "Drive 10,000 Miles During Deliveries", ImageUrl = "../images/achievements/Warming up.webp"},
+            new Achievement() {Id = 8, Name = "Rig Master", Description = "Own Your Own Truck", ImageUrl = "../images/achievements/Rig Master.webp"},
+            new Achievement() {Id = 9, Name = "Company Collector", Description = "Preform Deliveries for at Least Fifteen Different Companies", ImageUrl = "../images/achievements/CompanyCollector.webp" },
+            new Achievement() {Id = 10, Name = "High Five", Description = "Complete a Perfect Delivery (no damage, no fines, in-time) For a Job That is at Least 600 Miles", ImageUrl = "../images/achievements/HighFive.webp"},
+            new Achievement() {Id = 11, Name = "Final Makeover", Description = "Fully Upgrade one of your Garages", ImageUrl = "../images/achievements/FinalMakeover.webp"}, 
+            new Achievement() {Id = 12, Name = "Not a Problem", Description = "Successfully Park a Trailer at a Delivery Point", ImageUrl = "../images/achievements/NotAProblem.webp"},
+            new Achievement() {Id = 13, Name = "Like a Boss", Description = "Successfully Park a Trailer at a Hard Delivery Point", ImageUrl = "../images/achievements/LikeABoss.webp"},
+            new Achievement() {Id = 14, Name = "I Think I Like It", Description = "Finish 50 Deliveries", ImageUrl = "../images/achievements/IThink.webp"},
+            new Achievement() {Id = 15, Name = "Pimp MY Truck", Description = "Buy and Apply a Custom Paint Job", ImageUrl = "../images/achievements/PimpMy.webp"},
+            new Achievement() {Id = 16, StateId = 11, Name = "Silver State", Description = "Discover Every City in Nevada", ImageUrl = "../images/achievements/SilverState.webp"},
+            new Achievement() {Id = 17, StateId = 11, Name = "Gold Fever", Description = "Deliver Cargo to Both Quarries in Nevada",ImageUrl = "../images/achievements/Gold Fever.webp"},
+            new Achievement() {Id = 18, Name = "Parking Challenge", Description = "Complete Twenty Deliveries Choosing the Trailer Delivery Option Which Requires Reversing", ImageUrl = "../images/achievements/ParkingChallenge.webp"}
         
         };
 

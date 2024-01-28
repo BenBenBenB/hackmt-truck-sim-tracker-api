@@ -18,4 +18,6 @@ public class Achievement : ITruckSimTrackerDataModel
     public int StateId { get; set; }
     [ForeignKey(typeof(City))]
     public int CityId { get; set; }
+
+    public bool IsDlc { get; set; } 
 }

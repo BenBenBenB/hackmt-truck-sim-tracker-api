@@ -15,5 +15,7 @@ namespace TruckSimTracker.Api
         public int StateId { get; set; }
         public int CityId { get; set; }
         public string ImageUrl { get; set; }
+
+        public bool IsDlc { get; set; } 
     }
 }

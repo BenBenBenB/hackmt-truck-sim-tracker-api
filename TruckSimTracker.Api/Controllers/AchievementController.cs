@@ -29,10 +29,11 @@ namespace TruckSimTracker.Server.Controllers
                 Id = x.Id,
                 Name = x.Name,  
                 Description = x.Description,
-                DlcName = "Todo",
+                IsDlc = x.IsDlc,
                 ImageUrl = x.ImageUrl,
                 
-            });
+
+    });
             return Ok(result);
         }
 

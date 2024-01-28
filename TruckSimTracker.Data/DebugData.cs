@@ -107,7 +107,7 @@ namespace TruckSimTracker.Data
 
         static List<Achievement> AchievementsData = new()
         {            
-            new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = "Cha-Ching.webp"},
+            new Achievement() {Id = 1, Name = "Cha-Ching", IsDlc = false , Description = "Earn $100,000 Delivering Cargo", ImageUrl = "Cha-Ching.webp"},
             new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = "GasGuzzler.webp"},
             new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = "Bmi.webp"},
             new Achievement() {Id = 4, StateId = 3, Name = "California Dreamin'", Description = "Discover Every City in California", ImageUrl = "california.webp"},

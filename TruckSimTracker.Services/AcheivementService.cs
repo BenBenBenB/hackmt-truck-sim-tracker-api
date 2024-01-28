@@ -1,5 +1,7 @@
 ﻿using TruckSimTracker.Data.Repositories;
 using TruckSimTracker.Data.Models;
+using System.Security.Cryptography.X509Certificates;
+using System.ComponentModel;
 
 namespace TruckSimTracker.Services
 {
@@ -11,9 +13,12 @@ namespace TruckSimTracker.Services
     }
     public class AchievementService : IAchievementService
     {
-        private ITruckSimTrackerRepository Repo { get; set; }
-        public AchievementService(ITruckSimTrackerRepository repo)
+        private ITruckSimTrackerRepository Repo  { get; set; }
+
+        private IJobService _jobService { get; set; }
+        public AchievementService(ITruckSimTrackerRepository repo, IJobService jobService)
         {
+            _jobService = jobService;
             Repo = repo;
         }
 
@@ -31,5 +36,14 @@ namespace TruckSimTracker.Services
         {
             return await Repo.InsertAsync(newItem);
         }
+        
+        public async Task<bool> CheckCompletion(int id) 
+        {
+            var achivData = Repo.GetWithChildrenAsync<Achievement>(id);
+            var _job = _jobService.GetAsync();
+            return await ; 
+        }
     }
+
+    
 }

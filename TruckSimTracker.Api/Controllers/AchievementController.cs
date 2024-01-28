@@ -43,5 +43,10 @@ namespace TruckSimTracker.Server.Controllers
             var result = await _AchievementService.InsertAsync(newItem);
             return Ok(result);
         }
+        public async requirementsDto GetRequriermentsAsync(int id) 
+        {
+
+        }
     }
+
 }

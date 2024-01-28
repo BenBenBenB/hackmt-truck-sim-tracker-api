@@ -8,12 +8,12 @@ namespace TruckSimTracker.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AchivementController : ControllerBase
+    public class AchievementController : ControllerBase
     {
-        private readonly ILogger<AchivementController> _logger;
+        private readonly ILogger<AchievementController> _logger;
         private readonly IAchievementService _AchievementService;
 
-        public AchivementController(ILogger<AchivementController> logger, IAchievementService AchievementService)
+        public AchievementController(ILogger<AchievementController> logger, IAchievementService AchievementService)
         {
             _logger = logger;
             _AchievementService = AchievementService;

@@ -14,8 +14,6 @@ public class Achievement : ITruckSimTrackerDataModel
     public string Description { get; set; } = string.Empty;
     public string ImageUrl { get; set; } = string.Empty;
 
-    [ForeignKey(typeof(Cargo))]
-    public int CargoId { get; set; }
     [ForeignKey(typeof(State))]
     public int StateId { get; set; }
     [ForeignKey(typeof(City))]

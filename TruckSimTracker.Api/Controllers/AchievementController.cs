@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TruckSimTracker.Api;
 using TruckSimTracker.Services;
+using TruckSimTracker.Services.Dto;
 using Models = TruckSimTracker.Data.Models; 
 
 namespace TruckSimTracker.Server.Controllers
@@ -23,16 +24,14 @@ namespace TruckSimTracker.Server.Controllers
         public async Task<IActionResult> GetAsync()
         {
             var data = await _AchievementService.GetAsync();
-            var result = data.Select(x => new Achievement
+            var result = data.Select(x => new AchievementDto
             {
                 Id = x.Id,
-                Description = x.Description,
-                CargoId = x.CargoId,
-                StateId = x.StateId,
-                CityId = x.CityId,
                 Name = x.Name,  
-                Updated = x.Updated,
-                ImageUrl = x.ImageUrl
+                Description = x.Description,
+                DlcName = "Todo",
+                ImageUrl = x.ImageUrl,
+                
             });
             return Ok(result);
         }
@@ -45,7 +44,6 @@ namespace TruckSimTracker.Server.Controllers
         }
         //public async Task<List<RequirementDto>> GetRequirementsAsync(int id) 
         //{
-
         //}
     }
 

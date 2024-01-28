@@ -37,7 +37,7 @@ namespace TruckSimTracker.Services
             return await Repo.InsertAsync(newItem);
         }
         
-        public async Task<bool> CheckCompletion(int id) 
+        public async Task<bool> CheckCompletionAsync(int id) 
         {
             var achivData = Repo.GetWithChildrenAsync<Achievement>(id);
             var _job = _jobService.GetAsync();

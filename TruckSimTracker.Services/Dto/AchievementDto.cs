@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TruckSimTracker.Services.Dto;
 
-namespace TruckSimTracker.Services.Dto
+public class AchievementDto
 {
-    public class AchievementDto
-    {
-        int Id { get; init; }
-        string Name { get; init; }
-        string Description { get; init; }
-        string ImageUrl { get; init; }
-    }
+    public int Id { get; init; }
+    public string Name { get; init; }
+    public string Description { get; init; }
+    public string ImageUrl { get; init; }
+    public string DlcName { get; init; }
 }

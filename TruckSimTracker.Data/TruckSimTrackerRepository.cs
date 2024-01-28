@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions;
 using System.Data;
 using System.Reflection;
 namespace TruckSimTracker.Data.Repositories;
@@ -7,8 +8,12 @@ public interface ITruckSimTrackerRepository
 {
     public Task<List<T>> GetAsync<T>() where T : ITruckSimTrackerDataModel, new();
     public Task<T> GetAsync<T>(int id) where T : ITruckSimTrackerDataModel, new();
+    public Task<List<T>> GetWithChildrenAsync<T>() where T : ITruckSimTrackerDataModel, new();
+    public Task<T> GetWithChildrenAsync<T>(int id) where T : ITruckSimTrackerDataModel, new();
     public Task<T> InsertAsync<T>(T newItem) where T : ITruckSimTrackerDataModel, new();
     public Task<T> UpdateAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new();
+    public Task<T> DeleteAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new();
+    public Task<T> DeleteAsync<T>(int id) where T : ITruckSimTrackerDataModel, new();
     public Task ResetTableAsync<T>() where T : ITruckSimTrackerDataModel, new();
 }
 

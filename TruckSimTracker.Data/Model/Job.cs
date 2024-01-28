@@ -14,10 +14,11 @@ public class Job : ITruckSimTrackerDataModel
     public int Value { get; set; }
     public int Pay { get; set; }
 
-    [ForeignKey(typeof(City))]
-    public int StartCityId { get; set; }
-    [ForeignKey(typeof(City))]
-    public int EndCityId { get; set; }
+    [ForeignKey(typeof(Depot))]
+    public int StartDepotId { get; set; }
+
+    [ForeignKey(typeof(Depot))]
+    public int EndDepotId { get; set; }
 
     public bool Perfect { get; set; } = false; 
 }

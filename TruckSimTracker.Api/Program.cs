@@ -20,6 +20,8 @@ builder.Services.AddSingleton<ITruckSimTrackerRepository>(s => ActivatorUtilitie
 // register our services
 builder.Services.AddSingleton<IDownloadableContentService, DownloadableContentService>();
 builder.Services.AddSingleton<IJobService, JobService>();
+builder.Services.AddSingleton<IStateService, StateService>();
+builder.Services.AddSingleton<IAchivementService, AchivementService>();
 
 var app = builder.Build();
 

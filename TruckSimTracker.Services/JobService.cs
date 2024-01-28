@@ -3,31 +3,31 @@ using TruckSimTracker.Data.Models;
 
 namespace TruckSimTracker.Services
 {
-    public interface IDownloadableContentService
+    public interface IAchivementService
     {
-        Task<List<DlcContent>> GetAsync();
-        Task<DlcContent> GetAsync(int id);
-        Task<DlcContent> InsertAsync(DlcContent newItem);
+        Task<List<Achivement>> GetAsync();
+        Task<Achivement> GetAsync(int id);
+        Task<Achivement> InsertAsync(Achivement newItem);
     }
-    public class DownloadableContentService : IDownloadableContentService
+    public class AchivementService : IAchivementService
     {
         private ITruckSimTrackerRepository Repo { get; set; }
-        public DownloadableContentService(ITruckSimTrackerRepository repo)
+        public AchivementService(ITruckSimTrackerRepository repo)
         {
             Repo = repo;
         }
 
-        public async Task<List<DlcContent>> GetAsync()
+        public async Task<List<Achivement>> GetAsync()
         {
-            return await Repo.GetAsync<DlcContent>();
+            return await Repo.GetAsync<Achivement>();
         }
 
-        public async Task<DlcContent> GetAsync(int id)
+        public async Task<Achivement> GetAsync(int id)
         {
-            return await Repo.GetAsync<DlcContent>(id);
+            return await Repo.GetAsync<Achivement>(id);
         }
 
-        public async Task<DlcContent> InsertAsync(DlcContent newItem)
+        public async Task<Achivement> InsertAsync(Achivement newItem)
         {
             return await Repo.InsertAsync(newItem);
         }

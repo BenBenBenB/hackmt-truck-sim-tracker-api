@@ -3,7 +3,6 @@ using SQLiteNetExtensions.Attributes;
 using System.Reflection;
 namespace TruckSimTracker.Data.Models;
 
-namespace TruckSimTracker.Data.Models;
 public class Achievement : ITruckSimTrackerDataModel
 {
     [PrimaryKey, AutoIncrement]

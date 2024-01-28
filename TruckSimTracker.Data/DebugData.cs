@@ -107,24 +107,24 @@ namespace TruckSimTracker.Data
 
         static List<Achievement> AchievementsData = new()
         {            
-            new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = "../images/achievements/Cha-Ching.webp"},
-            new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = "../images/achievements/GasGuzzler.webp"},
-            new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = "../images/achievements/Bmi.webp"},
-            new Achievement() {Id = 4, StateId = 3, Name = "California Dreamin'", Description = "Discover Every City in California", ImageUrl = "../images/achievements/california.webp"},
-            new Achievement() {Id = 5, StateId = 3, CityId = 15, Name = "Sea Dog", Description = "Deliver Cargo to a Port in Oakland and a Port in San Francisco", ImageUrl = "../images/achievements/SeaDog.webp"},
-            new Achievement() {Id = 6, StateId = 3, Name = "Cheers!", Description = "Discover Three Vineyards in California", ImageUrl = "../images/achievements/Cheers.webp"},
-            new Achievement() {Id = 7, Name = "Warming Up", Description = "Drive 10,000 Miles During Deliveries", ImageUrl = "../images/achievements/Warming up.webp"},
-            new Achievement() {Id = 8, Name = "Rig Master", Description = "Own Your Own Truck", ImageUrl = "../images/achievements/Rig Master.webp"},
-            new Achievement() {Id = 9, Name = "Company Collector", Description = "Preform Deliveries for at Least Fifteen Different Companies", ImageUrl = "../images/achievements/CompanyCollector.webp" },
-            new Achievement() {Id = 10, Name = "High Five", Description = "Complete a Perfect Delivery (no damage, no fines, in-time) For a Job That is at Least 600 Miles", ImageUrl = "../images/achievements/HighFive.webp"},
-            new Achievement() {Id = 11, Name = "Final Makeover", Description = "Fully Upgrade one of your Garages", ImageUrl = "../images/achievements/FinalMakeover.webp"}, 
-            new Achievement() {Id = 12, Name = "Not a Problem", Description = "Successfully Park a Trailer at a Delivery Point", ImageUrl = "../images/achievements/NotAProblem.webp"},
-            new Achievement() {Id = 13, Name = "Like a Boss", Description = "Successfully Park a Trailer at a Hard Delivery Point", ImageUrl = "../images/achievements/LikeABoss.webp"},
-            new Achievement() {Id = 14, Name = "I Think I Like It", Description = "Finish 50 Deliveries", ImageUrl = "../images/achievements/IThink.webp"},
-            new Achievement() {Id = 15, Name = "Pimp MY Truck", Description = "Buy and Apply a Custom Paint Job", ImageUrl = "../images/achievements/PimpMy.webp"},
-            new Achievement() {Id = 16, StateId = 11, Name = "Silver State", Description = "Discover Every City in Nevada", ImageUrl = "../images/achievements/SilverState.webp"},
-            new Achievement() {Id = 17, StateId = 11, Name = "Gold Fever", Description = "Deliver Cargo to Both Quarries in Nevada",ImageUrl = "../images/achievements/Gold Fever.webp"},
-            new Achievement() {Id = 18, Name = "Parking Challenge", Description = "Complete Twenty Deliveries Choosing the Trailer Delivery Option Which Requires Reversing", ImageUrl = "../images/achievements/ParkingChallenge.webp"}
+            new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = "Cha-Ching.webp"},
+            new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = "GasGuzzler.webp"},
+            new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = "Bmi.webp"},
+            new Achievement() {Id = 4, StateId = 3, Name = "California Dreamin'", Description = "Discover Every City in California", ImageUrl = "california.webp"},
+            new Achievement() {Id = 5, StateId = 3, CityId = 15, Name = "Sea Dog", Description = "Deliver Cargo to a Port in Oakland and a Port in San Francisco", ImageUrl = "SeaDog.webp"},
+            new Achievement() {Id = 6, StateId = 3, Name = "Cheers!", Description = "Discover Three Vineyards in California", ImageUrl = "Cheers.webp"},
+            new Achievement() {Id = 7, Name = "Warming Up", Description = "Drive 10,000 Miles During Deliveries", ImageUrl = "Warming up.webp"},
+            new Achievement() {Id = 8, Name = "Rig Master", Description = "Own Your Own Truck", ImageUrl = "Rig Master.webp"},
+            new Achievement() {Id = 9, Name = "Company Collector", Description = "Preform Deliveries for at Least Fifteen Different Companies", ImageUrl = "CompanyCollector.webp" },
+            new Achievement() {Id = 10, Name = "High Five", Description = "Complete a Perfect Delivery (no damage, no fines, in-time) For a Job That is at Least 600 Miles", ImageUrl = "HighFive.webp"},
+            new Achievement() {Id = 11, Name = "Final Makeover", Description = "Fully Upgrade one of your Garages", ImageUrl = "FinalMakeover.webp"}, 
+            new Achievement() {Id = 12, Name = "Not a Problem", Description = "Successfully Park a Trailer at a Delivery Point", ImageUrl = "NotAProblem.webp"},
+            new Achievement() {Id = 13, Name = "Like a Boss", Description = "Successfully Park a Trailer at a Hard Delivery Point", ImageUrl = "LikeABoss.webp"},
+            new Achievement() {Id = 14, Name = "I Think I Like It", Description = "Finish 50 Deliveries", ImageUrl = "IThink.webp"},
+            new Achievement() {Id = 15, Name = "Pimp MY Truck", Description = "Buy and Apply a Custom Paint Job", ImageUrl = "PimpMy.webp"},
+            new Achievement() {Id = 16, StateId = 11, Name = "Silver State", Description = "Discover Every City in Nevada", ImageUrl = "SilverState.webp"},
+            new Achievement() {Id = 17, StateId = 11, Name = "Gold Fever", Description = "Deliver Cargo to Both Quarries in Nevada",ImageUrl = "Gold Fever.webp"},
+            new Achievement() {Id = 18, Name = "Parking Challenge", Description = "Complete Twenty Deliveries Choosing the Trailer Delivery Option Which Requires Reversing", ImageUrl = "ParkingChallenge.webp"}
         
         };
 

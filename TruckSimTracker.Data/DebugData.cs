@@ -16,7 +16,7 @@ namespace TruckSimTracker.Data
             await PopulateTable(repo, DlcContentData);
             await PopulateTable(repo, StateData);
             await PopulateTable(repo, CityData);
-            await PopulateTable(repo, AchivementsData);
+            await PopulateTable(repo, AchievementsData);
             await PopulateTable(repo, DepotData);
             await PopulateTable(repo, DriverlogData);
             await PopulateTable(repo, CargoData);
@@ -104,11 +104,11 @@ namespace TruckSimTracker.Data
             new City() {Id = 30, StateId = 11, Name = "Winnemucca" }
         };
 
-        static List<Achivement> AchivementsData = new()
+        static List<Achievement> AchievementsData = new()
         {
-            new Achivement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo"},
-            new Achivement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station"},
-            new Achivement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station"},
+            new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = ""},
+            new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = ""},
+            new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = ""},
         };
 
         static List<Depot> DepotData = new()

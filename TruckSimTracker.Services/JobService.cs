@@ -3,31 +3,31 @@ using TruckSimTracker.Data.Models;
 
 namespace TruckSimTracker.Services
 {
-    public interface IAchievementService
+    public interface IJobService
     {
-        Task<List<Achivement>> GetAsync();
-        Task<Achivement> GetAsync(int id);
-        Task<Achivement> InsertAsync(Achivement newItem);
+        Task<List<Job>> GetAsync();
+        Task<Job> GetAsync(int id);
+        Task<Job> InsertAsync(Job newItem);
     }
-    public class AchievementService : IAchievementService
+    public class JobService : IJobService
     {
         private ITruckSimTrackerRepository Repo { get; set; }
-        public AchievementService(ITruckSimTrackerRepository repo)
+        public JobService(ITruckSimTrackerRepository repo)
         {
             Repo = repo;
         }
 
-        public async Task<List<Achivement>> GetAsync()
+        public async Task<List<Job>> GetAsync()
         {
-            return await Repo.GetAsync<Achivement>();
+            return await Repo.GetAsync<Job>();
         }
 
-        public async Task<Achivement> GetAsync(int id)
+        public async Task<Job> GetAsync(int id)
         {
-            return await Repo.GetAsync<Achivement>(id);
+            return await Repo.GetAsync<Job>(id);
         }
 
-        public async Task<Achivement> InsertAsync(Achivement newItem)
+        public async Task<Job> InsertAsync(Job newItem)
         {
             return await Repo.InsertAsync(newItem);
         }

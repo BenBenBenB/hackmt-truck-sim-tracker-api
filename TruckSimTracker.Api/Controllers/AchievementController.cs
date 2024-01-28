@@ -23,7 +23,7 @@ namespace TruckSimTracker.Server.Controllers
         public async Task<IActionResult> GetAsync()
         {
             var data = await _AchievementService.GetAsync();
-            var result = data.Select(x => new Achivement
+            var result = data.Select(x => new Achievement
             {
                 Id = x.Id,
                 Description = x.Description,
@@ -32,13 +32,13 @@ namespace TruckSimTracker.Server.Controllers
                 CityId = x.CityId,
                 Name = x.Name,  
                 Updated = x.Updated,
-
+                ImageUrl = x.ImageUrl
             });
             return Ok(result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync(Models.Achivement newItem)
+        public async Task<IActionResult> PostAsync(Models.Achievement newItem)
         {
             var result = await _AchievementService.InsertAsync(newItem);
             return Ok(result);

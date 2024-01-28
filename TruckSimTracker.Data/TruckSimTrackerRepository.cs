@@ -47,7 +47,7 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
     public async Task ResetAllTablesAsync()
     {
         Task.WaitAll(
-            _conn.DropTableAsync<Models.Achivement>(),
+            _conn.DropTableAsync<Models.Achievement>(),
             _conn.DropTableAsync<Models.Cargo>(),
             _conn.DropTableAsync<Models.CargoType>(),
             _conn.DropTableAsync<Models.City>(),

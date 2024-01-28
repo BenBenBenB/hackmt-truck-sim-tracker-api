@@ -5,9 +5,9 @@ namespace TruckSimTracker.Services
 {
     public interface IDlcContentService
     {
-        Task<List<Data.Models.DlcContent>> GetAsync();
-        Task<Data.Models.DlcContent> GetAsync(int id);
-        Task<Data.Models.DlcContent> InsertAsync(Data.Models.DlcContent newItem);
+        Task<List<DlcContent>> GetAsync();
+        Task<DlcContent> GetAsync(int id);
+        Task<DlcContent> InsertAsync(DlcContent newItem);
     }
     public class DlcContentService : IDlcContentService
     {

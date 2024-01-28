@@ -22,6 +22,10 @@ builder.Services.AddSingleton<IDownloadableContentService, DownloadableContentSe
 builder.Services.AddSingleton<IJobService, JobService>();
 builder.Services.AddSingleton<IStateService, StateService>();
 builder.Services.AddSingleton<IAchivementService, AchivementService>();
+builder.Services.AddSingleton<ICityService, CityService>();
+builder.Services.AddSingleton<IDepotService, DepotService>();
+builder.Services.AddSingleton<ICargoTypeService, CargoTypeService>();
+builder.Services.AddSingleton<ICargoService, CargoService>();
 
 var app = builder.Build();
 

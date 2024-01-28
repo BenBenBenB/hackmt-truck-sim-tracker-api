@@ -18,7 +18,10 @@ namespace TruckSimTracker.Data
             await PopulateTable(repo, CityData);
             await PopulateTable(repo, AchivementsData);
             await PopulateTable(repo, DepotData);
-            await PopulateTable(repo, DriverlogData); 
+            await PopulateTable(repo, DriverlogData);
+            await PopulateTable(repo, CargoData);
+            await PopulateTable(repo, CargoTypeData);
+
         }
 
         private static async Task PopulateTable<T>(TruckSimTrackerRepository repo, List<T> data) where T : ITruckSimTrackerDataModel, new()
@@ -116,9 +119,20 @@ namespace TruckSimTracker.Data
 
         static List<Job> DriverlogData = new()
         {
-            new Job() {Id = 1, Company = "FedEx", StartDepotId = 1, EndDepotId = 2 },
+            new Job() {Id = 1, Company = "FedEx", StartDepotId = 1, EndDepotId = 2},
         };
 
+        static List<CargoType> CargoTypeData = new()
+        {
+            new CargoType() {Id = 1, Name = "Massive Bomb", DlcContentId = 5},
+            new CargoType() {Id = 2, Name = "Heavy Machinery", DlcContentId = 7},
+        };
+
+        static List<Cargo> CargoData = new()
+        {
+            new Cargo() {Id = 1, Name = "Weapon of Mass Destruction", CargoTypeId = 1},
+            new Cargo() {Id = 2, Name = "Backloader", CargoTypeId = 2}, 
+        };
 
     }
 }

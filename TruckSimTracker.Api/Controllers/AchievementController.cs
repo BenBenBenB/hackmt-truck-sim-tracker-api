@@ -8,22 +8,22 @@ namespace TruckSimTracker.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AchivementController : ControllerBase
+    public class AchievementController : ControllerBase
     {
-        private readonly ILogger<AchivementController> _logger;
-        private readonly IAchivementService _AchivementService;
+        private readonly ILogger<AchievementController> _logger;
+        private readonly IAchievementService _AchievementService;
 
-        public AchivementController(ILogger<AchivementController> logger, IAchivementService AchivementService)
+        public AchievementController(ILogger<AchievementController> logger, IAchievementService AchievementService)
         {
             _logger = logger;
-            _AchivementService = AchivementService;
+            _AchievementService = AchievementService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
-            var data = await _AchivementService.GetAsync();
-            var result = data.Select(x => new Achivement
+            var data = await _AchievementService.GetAsync();
+            var result = data.Select(x => new Achievement
             {
                 Id = x.Id,
                 Description = x.Description,
@@ -32,16 +32,15 @@ namespace TruckSimTracker.Server.Controllers
                 CityId = x.CityId,
                 Name = x.Name,  
                 Updated = x.Updated,
-//                ImageSrc = x.ImageSrc, 
-
+                ImageUrl = x.ImageUrl
             });
             return Ok(result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync(Models.Achivement newItem)
+        public async Task<IActionResult> PostAsync(Models.Achievement newItem)
         {
-            var result = await _AchivementService.InsertAsync(newItem);
+            var result = await _AchievementService.InsertAsync(newItem);
             return Ok(result);
         }
     }

@@ -4,7 +4,7 @@ using SQLiteNetExtensions.Attributes;
 namespace TruckSimTracker.Api
 {
 
-    public class Achivement
+    public class Achievement
     {
         //public string ImageSrc { get; set; }
         public int Id { get; set; }
@@ -14,5 +14,6 @@ namespace TruckSimTracker.Api
         public int CargoId { get; set; }
         public int StateId { get; set; }
         public int CityId { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

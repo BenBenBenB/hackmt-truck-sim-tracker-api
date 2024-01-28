@@ -3,14 +3,28 @@ using TruckSimTracker.Data;
 using TruckSimTracker.Data.Repositories;
 using TruckSimTracker.Server;
 
+
+string CustomCorsPolicy = "_customCorsPolicy";
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: CustomCorsPolicy,
+        policy =>
+        {
+            policy.WithOrigins(
+                "https://localhost:3000", 
+                "http://localhost:3000"
+            );
+        });
+});
 
 // register databases
 string dbPath = FileAccessHelper.GetLocalFilePath("truck-sim-tracker.db3");
@@ -18,10 +32,10 @@ builder.Services.AddSingleton<ITruckSimTrackerRepository>(s => ActivatorUtilitie
 
 
 // register our services
-builder.Services.AddSingleton<IDownloadableContentService, DownloadableContentService>();
+builder.Services.AddSingleton<IDlcContentService, DlcContentService>();
 builder.Services.AddSingleton<IJobService, JobService>();
 builder.Services.AddSingleton<IStateService, StateService>();
-builder.Services.AddSingleton<IAchivementService, AchivementService>();
+builder.Services.AddSingleton<IAchievementService, AchievementService>();
 builder.Services.AddSingleton<ICityService, CityService>();
 builder.Services.AddSingleton<IDepotService, DepotService>();
 builder.Services.AddSingleton<ICargoTypeService, CargoTypeService>();
@@ -41,9 +55,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(CustomCorsPolicy);
 
 app.MapFallbackToFile("/index.html");
 

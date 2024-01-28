@@ -41,7 +41,7 @@ namespace TruckSimTracker.Services
         {
             var achivData = Repo.GetWithChildrenAsync<Achievement>(id);
             var _job = _jobService.GetAsync();
-            return await ; 
+            return true; 
         }
     }
 

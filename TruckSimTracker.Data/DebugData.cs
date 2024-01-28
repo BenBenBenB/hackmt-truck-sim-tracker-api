@@ -16,6 +16,9 @@ namespace TruckSimTracker.Data
             await PopulateTable(repo, DlcContentData);
             await PopulateTable(repo, StateData);
             await PopulateTable(repo, CityData);
+            await PopulateTable(repo, AchivementsData);
+            await PopulateTable(repo, DepotData);
+            await PopulateTable(repo, DriverlogData); 
         }
 
         private static async Task PopulateTable<T>(TruckSimTrackerRepository repo, List<T> data) where T : ITruckSimTrackerDataModel, new()

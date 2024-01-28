@@ -3,16 +3,16 @@ using TruckSimTracker.Data.Models;
 
 namespace TruckSimTracker.Services
 {
-    public interface IAchivementService
+    public interface IAchievementService
     {
         Task<List<Achivement>> GetAsync();
         Task<Achivement> GetAsync(int id);
         Task<Achivement> InsertAsync(Achivement newItem);
     }
-    public class AchivementService : IAchivementService
+    public class AchievementService : IAchievementService
     {
         private ITruckSimTrackerRepository Repo { get; set; }
-        public AchivementService(ITruckSimTrackerRepository repo)
+        public AchievementService(ITruckSimTrackerRepository repo)
         {
             Repo = repo;
         }

@@ -10,9 +10,9 @@ namespace TruckSimTracker.Server.Controllers
     public class DownloadableContentController : ControllerBase
     {
         private readonly ILogger<DownloadableContentController> _logger;
-        private readonly IDownloadableContentService _dlcService;
+        private readonly IDlcContentService _dlcService;
 
-        public DownloadableContentController(ILogger<DownloadableContentController> logger, IDownloadableContentService dlcService)
+        public DownloadableContentController(ILogger<DownloadableContentController> logger, IDlcContentService dlcService)
         {
             _logger = logger;
             _dlcService = dlcService;

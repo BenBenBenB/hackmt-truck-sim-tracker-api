@@ -11,18 +11,18 @@ namespace TruckSimTracker.Server.Controllers
     public class AchivementController : ControllerBase
     {
         private readonly ILogger<AchivementController> _logger;
-        private readonly IAchivementService _AchivementService;
+        private readonly IAchievementService _AchievementService;
 
-        public AchivementController(ILogger<AchivementController> logger, IAchivementService AchivementService)
+        public AchivementController(ILogger<AchivementController> logger, IAchievementService AchievementService)
         {
             _logger = logger;
-            _AchivementService = AchivementService;
+            _AchievementService = AchievementService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
-            var data = await _AchivementService.GetAsync();
+            var data = await _AchievementService.GetAsync();
             var result = data.Select(x => new Achivement
             {
                 Id = x.Id,
@@ -40,7 +40,7 @@ namespace TruckSimTracker.Server.Controllers
         [HttpPost]
         public async Task<IActionResult> PostAsync(Models.Achivement newItem)
         {
-            var result = await _AchivementService.InsertAsync(newItem);
+            var result = await _AchievementService.InsertAsync(newItem);
             return Ok(result);
         }
     }

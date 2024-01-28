@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TruckSimTracker.Api;
-using TruckSimTracker.Data.Models;
+using Models = TruckSimTracker.Data.Models;
 using TruckSimTracker.Services;
 
 namespace TruckSimTracker.Server.Controllers
@@ -22,7 +22,7 @@ namespace TruckSimTracker.Server.Controllers
         public async Task<IActionResult> GetAsync()
         {
             var data = await _dlcService.GetAsync();
-            var result = data.Select(x => new DownloadableContent
+            var result = data.Select(x => new DownloadableContent 
             {
                 Id = x.Id,
                 Name = x.Name,
@@ -31,7 +31,7 @@ namespace TruckSimTracker.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync(DlcContent newItem)
+        public async Task<IActionResult> PostAsync(Models.DlcContent newItem)
         {
             var result = await _dlcService.InsertAsync(newItem);
             return Ok(result);

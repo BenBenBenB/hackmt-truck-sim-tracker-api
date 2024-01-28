@@ -54,7 +54,6 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
             _conn.DropTableAsync<Models.DlcContent>(),
             _conn.DropTableAsync<Models.Job>(),
             _conn.DropTableAsync<Models.State>()
-
         );
         await CreateTables();
     }

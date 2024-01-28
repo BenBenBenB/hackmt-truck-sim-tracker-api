@@ -11,8 +11,8 @@ public class Job : ITruckSimTrackerDataModel
 
     [ForeignKey(typeof(Cargo))]
     public int CargoId { get; set; }
-    public int Value { get; set; }
     public int Pay { get; set; }
+    public int Exp { get; set; }
 
     [ForeignKey(typeof(Depot))]
     public int StartDepotId { get; set; }

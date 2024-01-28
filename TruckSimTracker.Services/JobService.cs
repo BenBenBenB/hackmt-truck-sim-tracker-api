@@ -1,11 +1,12 @@
 ﻿using TruckSimTracker.Data.Repositories;
 using TruckSimTracker.Data.Models;
+using TruckSimTracker.Services.Dto;
 
 namespace TruckSimTracker.Services
 {
     public interface IJobService
     {
-        Task<List<Job>> GetAsync();
+        Task<List<JobDto>> GetAsync();
         Task<Job> GetAsync(int id);
         Task<Job> InsertAsync(Job newItem);
     }
@@ -17,9 +18,21 @@ namespace TruckSimTracker.Services
             Repo = repo;
         }
 
-        public async Task<List<Job>> GetAsync()
+        public async Task<List<JobDto>> GetAsync()
         {
-            return await Repo.GetAsync<Job>();
+            var data = await Repo.GetAsync<Job>();
+            return data.Select(job => new JobDto()
+            {
+                Id = job.Id,
+                CargoName = "CargoToDo",
+                DepotFromName = "ToName",
+                DepotFromLocation = "Todo, TD",
+                DepotToName = "FromName",
+                DepotToLocation = "Todo, TD",
+                Paid = job.Pay,
+                Exp = job.Exp,
+                Perfect = job.Perfect,
+            }).ToList();
         }
 
         public async Task<Job> GetAsync(int id)
@@ -29,7 +42,8 @@ namespace TruckSimTracker.Services
 
         public async Task<Job> InsertAsync(Job newItem)
         {
-            return await Repo.InsertAsync(newItem);
+            var result = await Repo.InsertAsync(newItem);
+            return result;
         }
     }
 }

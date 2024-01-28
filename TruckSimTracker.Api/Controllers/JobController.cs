@@ -23,19 +23,7 @@ namespace TruckSimTracker.Server.Controllers
         public async Task<IActionResult> GetAsync()
         {
             var data = await _JobService.GetAsync();
-            var result = data.Select(x => new Job
-            {
-                Id = x.Id,
-                Company = x.Company,
-                CargoId = x.CargoId,
-                Value = x.Value,
-                Updated = x.Updated,
-                Pay = x.Pay,
-                StartDepotId = x.StartDepotId,
-                EndDepotId = x.EndDepotId,
-                Perfect = x.Perfect, 
-            });
-            return Ok(result);
+            return Ok(data);
         }
 
         [HttpPost]

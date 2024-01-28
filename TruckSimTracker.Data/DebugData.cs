@@ -107,9 +107,9 @@ namespace TruckSimTracker.Data
 
         static List<Achievement> AchievementsData = new()
         {
-            new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = ""},
-            new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = ""},
-            new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = ""},
+            new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/9/9f/ATS_Achievement_money_100k.png/revision/latest?cb=20160218092526"},
+            new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/d/dc/ATS_Achievement_use_gas_stat.png/revision/latest?cb=20160218092125"},
+            new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = "https://static.wikia.nocookie.net/euro-truck-simulator-2/images/8/82/ATS_Achievement_use_weigh_stat.png/revision/latest?cb=20160218092228"},
         };
 
         static List<Depot> DepotData = new()

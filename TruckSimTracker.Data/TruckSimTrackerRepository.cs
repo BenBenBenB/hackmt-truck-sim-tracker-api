@@ -2,6 +2,7 @@
 using SQLiteNetExtensions;
 using System.Data;
 using System.Reflection;
+using SQLiteNetExtensionsAsync.Extensions;
 namespace TruckSimTracker.Data.Repositories;
 
 public interface ITruckSimTrackerRepository
@@ -12,8 +13,8 @@ public interface ITruckSimTrackerRepository
     public Task<T> GetWithChildrenAsync<T>(int id) where T : ITruckSimTrackerDataModel, new();
     public Task<T> InsertAsync<T>(T newItem) where T : ITruckSimTrackerDataModel, new();
     public Task<T> UpdateAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new();
-    public Task<T> DeleteAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new();
-    public Task<T> DeleteAsync<T>(int id) where T : ITruckSimTrackerDataModel, new();
+    public Task DeleteAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new();
+    public Task DeleteAsync<T>(int id) where T : ITruckSimTrackerDataModel, new();
     public Task ResetTableAsync<T>() where T : ITruckSimTrackerDataModel, new();
 }
 
@@ -126,5 +127,60 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
         {
             return new();
         }
+    }
+
+    public async Task<List<T>> GetWithChildrenAsync<T>() where T : ITruckSimTrackerDataModel, new()
+    {
+        List<T> result = []; 
+        try
+        {
+            await InitAsync();
+            result = await _conn.GetAllWithChildrenAsync<T>();
+        }
+        catch (Exception ex)
+        {
+        }
+        return result ?? new();
+    }
+
+    public async Task<T> GetWithChildrenAsync<T>(int id) where T : ITruckSimTrackerDataModel, new()
+    {
+        T result = new();
+        try
+        {
+            await InitAsync();
+            result = await _conn.GetWithChildrenAsync<T>(id);
+        }
+        catch (Exception ex)
+        {
+        }
+        return result ?? new();
+    }
+
+    public async Task DeleteAsync<T>(T dataItem) where T : ITruckSimTrackerDataModel, new()
+    {
+         T result = new();
+        try
+        {
+            await InitAsync();
+            _ = await _conn.DeleteAsync<T>(dataItem);
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+
+    public async Task DeleteAsync<T>(int id) where T : ITruckSimTrackerDataModel, new()
+    {
+        T result = new();
+        try
+        {
+            await InitAsync();
+            _ = await _conn.DeleteAsync<T>(id);
+        }
+        catch (Exception ex)
+        {
+        }
+        
     }
 }

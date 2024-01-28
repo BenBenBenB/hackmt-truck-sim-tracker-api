@@ -32,6 +32,7 @@ namespace TruckSimTracker.Server.Controllers
                 CityId = x.CityId,
                 Name = x.Name,  
                 Updated = x.Updated,
+//                ImageSrc = x.ImageSrc, 
 
             });
             return Ok(result);

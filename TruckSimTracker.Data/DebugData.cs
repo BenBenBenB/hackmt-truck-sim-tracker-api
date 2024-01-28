@@ -21,6 +21,7 @@ namespace TruckSimTracker.Data
             await PopulateTable(repo, DriverlogData);
             await PopulateTable(repo, CargoData);
             await PopulateTable(repo, CargoTypeData);
+            
 
         }
 
@@ -106,7 +107,7 @@ namespace TruckSimTracker.Data
 
         static List<Achivement> AchivementsData = new()
         {
-            new Achivement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo"},
+            new Achivement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo",/* ImageSrc = "C:\\Users\\lukah\\Pictures\\Screenshots\\Screenshot 2023-08-12 144119.png"*/},
             new Achivement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station"},
             new Achivement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station"},
         };

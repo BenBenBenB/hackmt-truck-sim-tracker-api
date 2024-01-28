@@ -6,7 +6,7 @@ namespace TruckSimTracker.Api
 
     public class Achivement
     {
-
+        //public string ImageSrc { get; set; }
         public int Id { get; set; }
         public DateTime Updated { get; set; }
         public string Name { get; set; } 

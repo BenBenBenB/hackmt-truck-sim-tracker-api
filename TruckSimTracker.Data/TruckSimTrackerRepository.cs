@@ -20,7 +20,7 @@ public interface ITruckSimTrackerRepository
 
 public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerRepository
 {
-    public static readonly string ModelNameSpace = "TruckSimTracker.Data.Models";
+    public static readonly string ModelNameSpace = "TruckSimTracker.Data.Model";
 
     private string _dbPath = dbPath;
     private SQLiteAsyncConnection _conn = default!;
@@ -53,14 +53,14 @@ public class TruckSimTrackerRepository(string dbPath) : ITruckSimTrackerReposito
     public async Task ResetAllTablesAsync()
     {
         Task.WaitAll(
-            _conn.DropTableAsync<Models.Achievement>(),
-            _conn.DropTableAsync<Models.Cargo>(),
-            _conn.DropTableAsync<Models.CargoType>(),
-            _conn.DropTableAsync<Models.City>(),
-            _conn.DropTableAsync<Models.DlcContent>(),
-            _conn.DropTableAsync<Models.Job>(),
-            _conn.DropTableAsync<Models.State>(),
-            _conn.DropTableAsync<Models.Depot>()
+            _conn.DropTableAsync<Model.Achievement>(),
+            _conn.DropTableAsync<Model.Cargo>(),
+            _conn.DropTableAsync<Model.CargoType>(),
+            _conn.DropTableAsync<Model.City>(),
+            _conn.DropTableAsync<Model.DlcContent>(),
+            _conn.DropTableAsync<Model.Job>(),
+            _conn.DropTableAsync<Model.State>(),
+            _conn.DropTableAsync<Model.Depot>()
         );
         await CreateTables();
     }

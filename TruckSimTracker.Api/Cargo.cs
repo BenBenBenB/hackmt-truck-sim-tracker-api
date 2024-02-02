@@ -1,6 +1,6 @@
 ﻿using SQLite;
 using TruckSimTracker.Data;
-using TruckSimTracker.Data.Models;
+using TruckSimTracker.Data.Model;
 
 namespace TruckSimTracker.Api
 {

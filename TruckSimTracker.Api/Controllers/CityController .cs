@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TruckSimTracker.Api;
 using TruckSimTracker.Services;
-using Models = TruckSimTracker.Data.Models; 
+using Models = TruckSimTracker.Data.Model; 
 
 namespace TruckSimTracker.Server.Controllers
 {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TruckSimTracker.Api;
-using Models = TruckSimTracker.Data.Models;
+using Models = TruckSimTracker.Data.Model;
 using TruckSimTracker.Services;
 
 namespace TruckSimTracker.Server.Controllers

@@ -1,5 +1,5 @@
 ﻿using TruckSimTracker.Data.Repositories;
-using TruckSimTracker.Data.Models;
+using TruckSimTracker.Data.Model;
 
 namespace TruckSimTracker.Services
 {

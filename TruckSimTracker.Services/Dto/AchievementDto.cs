@@ -1,5 +1,4 @@
-﻿namespace TruckSimTracker.Services.Dto;
-
+﻿
 public class AchievementDto
 {
     public int Id { get; init; }

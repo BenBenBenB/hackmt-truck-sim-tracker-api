@@ -10,8 +10,8 @@
         public int CargoId { get; set; }
         public int Value { get; set; }
         public int Pay { get; set; }
-        public int StartDepotId { get; set; }
-        public int EndDepotId { get; set; }
+        public int OriginDepotId { get; set; }
+        public int TargetDepotId { get; set; }
         public bool Perfect { get; set; } 
     }
 }

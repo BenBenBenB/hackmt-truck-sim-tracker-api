@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TruckSimTracker.Api;
 using TruckSimTracker.Services;
 using TruckSimTracker.Services.Dto;
-using Models = TruckSimTracker.Data.Models; 
+using Models = TruckSimTracker.Data.Model; 
 
 namespace TruckSimTracker.Server.Controllers
 {
@@ -27,12 +27,20 @@ namespace TruckSimTracker.Server.Controllers
             var result = data.Select(x => new AchievementDto
             {
                 Id = x.Id,
-                Name = x.Name,  
+                Name = x.Name,
                 Description = x.Description,
                 DlcName = "Todo",
                 ImageUrl = x.ImageUrl,
-                
+
             });
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> GetAchievementAsync(int id)
+        {
+            var result = await _AchievementService.GetWithChildrenAsync(id);
             return Ok(result);
         }
 
@@ -42,9 +50,6 @@ namespace TruckSimTracker.Server.Controllers
             var result = await _AchievementService.InsertAsync(newItem);
             return Ok(result);
         }
-        //public async Task<List<RequirementDto>> GetRequirementsAsync(int id) 
-        //{
-        //}
     }
 
 }

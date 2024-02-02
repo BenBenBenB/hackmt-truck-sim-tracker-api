@@ -1,5 +1,5 @@
 ﻿using TruckSimTracker.Data.Repositories;
-using TruckSimTracker.Data.Models;
+using TruckSimTracker.Data.Model;
 
 namespace TruckSimTracker.Services
 {
@@ -17,17 +17,17 @@ namespace TruckSimTracker.Services
             Repo = repo;
         }
 
-        public async Task<List<Data.Models.DlcContent>> GetAsync()
+        public async Task<List<Data.Model.DlcContent>> GetAsync()
         {
-            return await Repo.GetAsync<Data.Models.DlcContent>();
+            return await Repo.GetAsync<Data.Model.DlcContent>();
         }
 
-        public async Task<Data.Models.DlcContent> GetAsync(int id)
+        public async Task<Data.Model.DlcContent> GetAsync(int id)
         {
-            return await Repo.GetAsync<Data.Models.DlcContent>(id);
+            return await Repo.GetAsync<Data.Model.DlcContent>(id);
         }
 
-        public async Task<Data.Models.DlcContent> InsertAsync(Data.Models.DlcContent newItem)
+        public async Task<Data.Model.DlcContent> InsertAsync(Data.Model.DlcContent newItem)
         {
             return await Repo.InsertAsync(newItem);
         }

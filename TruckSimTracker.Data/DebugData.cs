@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TruckSimTracker.Data;
-using TruckSimTracker.Data.Models;
+using TruckSimTracker.Data.Model;
 using TruckSimTracker.Data.Repositories;
 
 namespace TruckSimTracker.Data
@@ -21,8 +21,7 @@ namespace TruckSimTracker.Data
             await PopulateTable(repo, DriverlogData);
             await PopulateTable(repo, CargoData);
             await PopulateTable(repo, CargoTypeData);
-            
-
+            await PopulateTable(repo, RequirementsData);
         }
 
         private static async Task PopulateTable<T>(TruckSimTrackerRepository repo, List<T> data) where T : ITruckSimTrackerDataModel, new()
@@ -110,9 +109,9 @@ namespace TruckSimTracker.Data
             new Achievement() {Id = 1, Name = "Cha-Ching", Description = "Earn $100,000 Delivering Cargo", ImageUrl = "../images/achievements/Cha-Ching.webp"},
             new Achievement() {Id = 2, Name = "Gas Guzzeler", Description = "Use a Gas Station", ImageUrl = "../images/achievements/GasGuzzler.webp"},
             new Achievement() {Id = 3, Name = "What's your BMI?", Description = "Use a Weight Station", ImageUrl = "../images/achievements/Bmi.webp"},
-            new Achievement() {Id = 4, StateId = 3, Name = "California Dreamin'", Description = "Discover Every City in California", ImageUrl = "../images/achievements/california.webp"},
-            new Achievement() {Id = 5, StateId = 3, CityId = 15, Name = "Sea Dog", Description = "Deliver Cargo to a Port in Oakland and a Port in San Francisco", ImageUrl = "../images/achievements/SeaDog.webp"},
-            new Achievement() {Id = 6, StateId = 3, Name = "Cheers!", Description = "Discover Three Vineyards in California", ImageUrl = "../images/achievements/Cheers.webp"},
+            new Achievement() {Id = 4, Name = "California Dreamin'", Description = "Discover Every City in California", ImageUrl = "../images/achievements/california.webp"},
+            new Achievement() {Id = 5, Name = "Sea Dog", Description = "Deliver Cargo to a Port in Oakland and a Port in San Francisco", ImageUrl = "../images/achievements/SeaDog.webp"},
+            new Achievement() {Id = 6, Name = "Cheers!", Description = "Discover Three Vineyards in California", ImageUrl = "../images/achievements/Cheers.webp"},
             new Achievement() {Id = 7, Name = "Warming Up", Description = "Drive 10,000 Miles During Deliveries", ImageUrl = "../images/achievements/Warming up.webp"},
             new Achievement() {Id = 8, Name = "Rig Master", Description = "Own Your Own Truck", ImageUrl = "../images/achievements/Rig Master.webp"},
             new Achievement() {Id = 9, Name = "Company Collector", Description = "Preform Deliveries for at Least Fifteen Different Companies", ImageUrl = "../images/achievements/CompanyCollector.webp" },
@@ -122,8 +121,8 @@ namespace TruckSimTracker.Data
             new Achievement() {Id = 13, Name = "Like a Boss", Description = "Successfully Park a Trailer at a Hard Delivery Point", ImageUrl = "../images/achievements/LikeABoss.webp"},
             new Achievement() {Id = 14, Name = "I Think I Like It", Description = "Finish 50 Deliveries", ImageUrl = "../images/achievements/IThink.webp"},
             new Achievement() {Id = 15, Name = "Pimp MY Truck", Description = "Buy and Apply a Custom Paint Job", ImageUrl = "../images/achievements/PimpMy.webp"},
-            new Achievement() {Id = 16, StateId = 11, Name = "Silver State", Description = "Discover Every City in Nevada", ImageUrl = "../images/achievements/SilverState.webp"},
-            new Achievement() {Id = 17, StateId = 11, Name = "Gold Fever", Description = "Deliver Cargo to Both Quarries in Nevada",ImageUrl = "../images/achievements/Gold Fever.webp"},
+            new Achievement() {Id = 16, Name = "Silver State", Description = "Discover Every City in Nevada", ImageUrl = "../images/achievements/SilverState.webp"},
+            new Achievement() {Id = 17, Name = "Gold Fever", Description = "Deliver Cargo to Both Quarries in Nevada",ImageUrl = "../images/achievements/Gold Fever.webp"},
             new Achievement() {Id = 18, Name = "Parking Challenge", Description = "Complete Twenty Deliveries Choosing the Trailer Delivery Option Which Requires Reversing", ImageUrl = "../images/achievements/ParkingChallenge.webp"}
         
         };
@@ -175,17 +174,20 @@ namespace TruckSimTracker.Data
             new Depot() {Id = 43, CityId = 22, Name = "Eddy's" },
             new Depot() {Id = 44, CityId = 25, Name = "Eddy's" },
             new Depot() {Id = 45, CityId = 28, Name = "Eddy's" },
-            new Depot() {Id = 46, CityId = 6, Name = "Gallon Oli" },
-            new Depot() {Id = 47, CityId = 9, Name = "Gallon Oli" },
-            new Depot() {Id = 48, CityId = 11, Name = "Gallon Oli" },
-            new Depot() {Id = 49, CityId = 23, Name = "Gallon Oli" },
-            new Depot() {Id = 50, CityId = 30, Name = "Gallon Oli" },
+            new Depot() {Id = 46, CityId = 6, Name = "Gallon Oil" },
+            new Depot() {Id = 47, CityId = 9, Name = "Gallon Oil" },
+            new Depot() {Id = 48, CityId = 11, Name = "Gallon Oil" },
+            new Depot() {Id = 49, CityId = 23, Name = "Gallon Oil" },
+            new Depot() {Id = 50, CityId = 30, Name = "Gallon Oil" },
+
+            new Depot() {Id = 51, CityId = 10, Name = "Oakland Shippers" },
+            new Depot() {Id = 52, CityId = 15, Name = "Port of San Francisco" },
 
         };
 
         static List<Job> DriverlogData = new()
         {
-            new Job() {Id = 1, Company = "FedEx", StartDepotId = 1, EndDepotId = 2},
+            new Job() {Id = 1, Company = "FedEx", OriginDepotId = 1, TargetDepotId = 2},
         };
 
         static List<CargoType> CargoTypeData = new()
@@ -198,6 +200,12 @@ namespace TruckSimTracker.Data
         {
             new Cargo() {Id = 1, Name = "Weapon of Mass Destruction", CargoTypeId = 1},
             new Cargo() {Id = 2, Name = "Backloader", CargoTypeId = 2}, 
+        };
+
+        static List<Requirement> RequirementsData = new()
+        {
+            new Requirement() {Id = 1, AchievementId = 5, OriginDepotId=51},
+            new Requirement() {Id = 2, AchievementId = 5, OriginDepotId=52},
         };
 
     }

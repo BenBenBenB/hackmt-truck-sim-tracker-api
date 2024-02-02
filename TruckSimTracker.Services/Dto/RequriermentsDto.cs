@@ -1,5 +1,6 @@
-﻿
-public class RequirermentsDto 
+﻿namespace TruckSimTracker.Services.Dto;
+
+public class RequirementsDto 
 {
     public int Id { get; set; }
     public int AchievementId { get; set; }

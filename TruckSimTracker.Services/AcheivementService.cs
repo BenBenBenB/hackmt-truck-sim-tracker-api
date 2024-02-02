@@ -1,5 +1,5 @@
 ﻿using TruckSimTracker.Data.Repositories;
-using TruckSimTracker.Data.Models;
+using TruckSimTracker.Data.Model;
 using System.Security.Cryptography.X509Certificates;
 using System.ComponentModel;
 
@@ -8,7 +8,8 @@ namespace TruckSimTracker.Services
     public interface IAchievementService
     {
         Task<List<Achievement>> GetAsync();
-        Task<Achievement> GetAsync(int id);
+        Task<Achievement> GetAsync(int achievementId);
+        Task<Achievement> GetWithChildrenAsync(int achievementId);
         Task<Achievement> InsertAsync(Achievement newItem);
     }
     public class AchievementService : IAchievementService
@@ -29,7 +30,7 @@ namespace TruckSimTracker.Services
 
         public async Task<Achievement> GetAsync(int id)
         {
-            return await Repo.GetAsync<Achievement>(id);
+            return await Repo.GetWithChildrenAsync<Achievement>(id);
         }
 
         public async Task<Achievement> InsertAsync(Achievement newItem)
@@ -37,11 +38,17 @@ namespace TruckSimTracker.Services
             return await Repo.InsertAsync(newItem);
         }
         
-        public async Task<bool> CheckCompletionAsync(int id) 
+        public async Task<bool> GetCompletionAsync(int achievementId) 
         {
-            var achivData = Repo.GetWithChildrenAsync<Achievement>(id);
-            var _job = _jobService.GetAsync();
-            return true; 
+            var achieveData = await GetWithChildrenAsync(achievementId);
+            var jobs = await _jobService.GetAsync();
+            //return BusinessLogic.RequirementHelper.CalculateCompletion(achieveData, jobs); 
+            return true;
+        }
+
+        public async Task<Achievement> GetWithChildrenAsync(int id)
+        {
+            return await Repo.GetWithChildrenAsync<Achievement>(id);
         }
     }
 

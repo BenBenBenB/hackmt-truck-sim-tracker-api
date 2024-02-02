@@ -1,2 +1,2 @@
 # truck-sim-tracker
-An app to help track progress on Steam achievements in American Truck Stimulator.
+Created for HackMT 2024. An API for an app that helps track progress on Steam achievements in American Truck Stimulator. See UI [here](https://github.com/BenBenBenB/hackmt-truck-sim-tracker-ui).
